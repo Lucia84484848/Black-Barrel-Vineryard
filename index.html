@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Black Barrel Vineyard - Servidor de Roleplay">
+
     <title>Black Barrel Vineyard</title>
 
     <link rel="stylesheet" href="style.css">
@@ -11,361 +12,212 @@
 
 <body>
 
-    <header class="navbar">
-        <div class="container nav-content">
-            <a href="#" class="logo">
-                🍷 Black Barrel Vineyard
-            </a>
+<header class="navbar">
+    <div class="container nav-content">
 
-            <nav>
-                <a href="#inicio">Inicio</a>
-                <a href="#productos">Productos</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#pedido">Pedido</a>
-            </nav>
-
-            <button class="cart-button" onclick="toggleCart()">
-                🛒 <span id="cart-count">0</span>
-            </button>
+        <div class="logo">
+            🍷 Black Barrel Vineyard
         </div>
-    </header>
 
-    <main>
-
-        <section id="inicio" class="hero">
-            <div class="hero-content">
-
-                <span class="badge">
-                    SERVIDOR DE ROLEPLAY
-                </span>
-
-                <h1>Black Barrel Vineyard</h1>
-
-                <p>
-                    Vinos exclusivos para los mejores momentos
-                    de nuestra ciudad.
-                </p>
-
-                <a href="#productos" class="primary-button">
-                    Ver catálogo
-                </a>
-
-            </div>
-        </section>
-
-
-        <section id="productos" class="section">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <span>
-                        NUESTRO CATÁLOGO
-                    </span>
-
-                    <h2>
-                        Vinos de la casa
-                    </h2>
-
-                    <p>
-                        Descubre nuestra selección exclusiva
-                        dentro del mundo del roleplay.
-                    </p>
-
-                </div>
-
-                <div id="products-grid" class="products-grid"></div>
-
-            </div>
-
-        </section>
-
-
-        <section id="nosotros" class="about-section">
-
-            <div class="container about-grid">
-
-                <div class="about-image">
-                    🍷
-                </div>
-
-                <div class="about-content">
-
-                    <span class="small-title">
-                        SOBRE NOSOTROS
-                    </span>
-
-                    <h2>
-                        Una tradición en la ciudad
-                    </h2>
-
-                    <p>
-                        Black Barrel Vineyard es una bodega
-                        ficticia creada para nuestro servidor
-                        de roleplay.
-                    </p>
-
-                    <p>
-                        Ofrecemos diferentes vinos y productos
-                        para eventos, restaurantes y personajes
-                        de nuestra ciudad.
-                    </p>
-
-                    <div class="features">
-
-                        <div>
-                            <strong>🍇</strong>
-                            <span>
-                                Selección exclusiva
-                            </span>
-                        </div>
-
-                        <div>
-                            <strong>📦</strong>
-                            <span>
-                                Pedidos rápidos
-                            </span>
-                        </div>
-
-                        <div>
-                            <strong>🎭</strong>
-                            <span>
-                                100% Roleplay
-                            </span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <section id="pedido" class="section order-section">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <span>
-                        PEDIDOS
-                    </span>
-
-                    <h2>
-                        Solicita tu pedido
-                    </h2>
-
-                    <p>
-                        Completa el formulario para realizar
-                        un pedido dentro del roleplay.
-                    </p>
-
-                </div>
-
-
-                <form id="order-form" class="order-form">
-
-                    <div class="form-row">
-
-                        <div class="form-group">
-
-                            <label for="character">
-                                Nombre del personaje
-                            </label>
-
-                            <input
-                                type="text"
-                                id="character"
-                                placeholder="Ej: Juan García"
-                                required
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="contact">
-                                Contacto IC
-                            </label>
-
-                            <input
-                                type="text"
-                                id="contact"
-                                placeholder="Ej: 555-1234"
-                                required
-                            >
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="message">
-                            Información adicional
-                        </label>
-
-                        <textarea
-                            id="message"
-                            rows="5"
-                            placeholder="Lugar de entrega, horario, etc."
-                        ></textarea>
-
-                    </div>
-
-
-                    <button
-                        type="submit"
-                        class="primary-button"
-                    >
-                        Enviar pedido
-                    </button>
-
-                    <p
-                        id="form-message"
-                        class="form-message"
-                    ></p>
-
-                </form>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <div
-        id="cart-overlay"
-        class="cart-overlay"
-        onclick="closeCart(event)"
-    >
-
-        <aside
-            class="cart"
-            onclick="event.stopPropagation()"
-        >
-
-            <div class="cart-header">
-
-                <h2>
-                    🛒 Tu pedido
-                </h2>
-
-                <button
-                    onclick="toggleCart()"
-                    class="close-button"
-                >
-                    ×
-                </button>
-
-            </div>
-
-
-            <div
-                id="cart-items"
-                class="cart-items"
-            >
-
-                <p class="empty-cart">
-                    Tu carrito está vacío.
-                </p>
-
-            </div>
-
-
-            <div class="cart-footer">
-
-                <div class="total">
-
-                    <span>
-                        Total
-                    </span>
-
-                    <strong id="cart-total">
-                        $0
-                    </strong>
-
-                </div>
-
-                <button
-                    class="primary-button full-button"
-                    onclick="goToOrder()"
-                >
-                    Continuar pedido
-                </button>
-
-                <button
-                    class="secondary-button full-button"
-                    onclick="clearCart()"
-                >
-                    Vaciar carrito
-                </button>
-
-            </div>
-
-        </aside>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#vinos">Vinos</a>
+            <a href="#servidor">Servidor</a>
+        </nav>
 
     </div>
+</header>
 
 
-    <footer>
+<main>
 
-        <div class="container footer-content">
+    <section id="inicio" class="hero">
 
-            <div>
+        <div class="hero-content">
 
-                <div class="logo">
-                    🍷 Black Barrel Vineyard
-                </div>
+            <span class="badge">
+                SERVIDOR DE ROLEPLAY
+            </span>
+
+            <h1>
+                Black Barrel Vineyard
+            </h1>
+
+            <p>
+                Una bodega ficticia creada exclusivamente
+                para nuestro servidor de roleplay.
+            </p>
+
+            <a href="#vinos" class="primary-button">
+                Ver nuestros vinos
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section id="vinos" class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>
+                    NUESTRA BODEGA
+                </span>
+
+                <h2>
+                    Nuestros vinos
+                </h2>
 
                 <p>
-                    Negocio ficticio perteneciente
-                    a un servidor de roleplay.
+                    Productos totalmente ficticios
+                    pertenecientes al mundo del servidor.
                 </p>
 
             </div>
 
 
-            <div class="footer-links">
+            <div class="products-grid">
 
-                <a href="#inicio">
-                    Inicio
-                </a>
+                <article class="product-card">
 
-                <a href="#productos">
-                    Productos
-                </a>
+                    <div class="product-image">
+                        🍷
+                    </div>
 
-                <a href="#nosotros">
-                    Nosotros
-                </a>
+                    <div class="product-info">
 
-                <a href="#pedido">
-                    Pedidos
+                        <span class="product-category">
+                            VINO TINTO
+                        </span>
+
+                        <h3>
+                            Reserva Imperial
+                        </h3>
+
+                        <p>
+                            Una de las reservas más conocidas
+                            de Black Barrel Vineyard.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="product-card">
+
+                    <div class="product-image">
+                        🥂
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            VINO BLANCO
+                        </span>
+
+                        <h3>
+                            Valle Dorado
+                        </h3>
+
+                        <p>
+                            Vino ficticio producido en los
+                            viñedos de nuestra ciudad.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="product-card">
+
+                    <div class="product-image">
+                        🍾
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            EDICIÓN ESPECIAL
+                        </span>
+
+                        <h3>
+                            Reserva Nocturna
+                        </h3>
+
+                        <p>
+                            Una edición especial dentro
+                            del universo del roleplay.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="servidor" class="about-section">
+
+        <div class="container about-grid">
+
+            <div class="about-image">
+                🍇
+            </div>
+
+            <div class="about-content">
+
+                <span class="small-title">
+                    ROLEPLAY
+                </span>
+
+                <h2>
+                    Visita nuestro servidor
+                </h2>
+
+                <p>
+                    Black Barrel Vineyard forma parte
+                    de un servidor de roleplay.
+                </p>
+
+                <p>
+                    Todo lo mostrado en esta web es ficticio
+                    y forma parte del juego.
+                </p>
+
+                <a
+                    href="AQUI-VA-TU-ENLACE"
+                    class="primary-button"
+                    target="_blank"
+                >
+                    Entrar al servidor
                 </a>
 
             </div>
 
         </div>
 
+    </section>
 
-        <div class="copyright">
-
-            © 2026 Black Barrel Vineyard —
-            Proyecto ficticio de roleplay.
-
-        </div>
-
-    </footer>
+</main>
 
 
-    <script src="script.js"></script>
+<footer>
+
+    <div class="copyright">
+        © 2026 Black Barrel Vineyard —
+        Proyecto ficticio de roleplay.
+    </div>
+
+</footer>
 
 </body>
 </html>
