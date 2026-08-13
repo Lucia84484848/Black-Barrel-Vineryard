@@ -636,4 +636,34 @@ body {
 footer {
     background: #050505;
     border-top: 2px solid #d4af37;
+}/* LOGOTIPO / TÍTULO PRINCIPAL */
+
+.hero h1 {
+    color: #d4af37;
+    font-size: clamp(3.5rem, 9vw, 7rem);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    text-shadow:
+        0 2px 0 #8b6f1f,
+        0 5px 15px rgba(0,0,0,0.8),
+        0 0 25px rgba(212,175,55,0.25);
+
+    position: relative;
+    display: inline-block;
+}
+
+.hero h1::after {
+    content: "";
+    display: block;
+
+    width: 65%;
+    height: 4px;
+
+    margin: 18px auto 0;
+
+    background: #7a0c2e;
+    border-radius: 10px;
+
+    box-shadow: 0 0 12px rgba(122,12,46,0.8);
 }
